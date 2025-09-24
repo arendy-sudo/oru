@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Paquetes - ORU</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles/main.css">
+  <link rel="stylesheet" href="styles/header.css">
+  <link rel="stylesheet" href="styles/packages.css">
+  <link rel="stylesheet" href="styles/footer.css">
+
+
+  <style>
+    /* Hace que las opciones de precio muestren el cursor como mano */
+    .pricing-option {
+      cursor: pointer;
+    }
+  </style>
+</head>
+
+<body>
+
+
+  <header class="header">
+    <div class="header-container">
+      <div class="logo">
+        <a href="index.html">
+          <img src="images/ORU logo principal.png" alt="ORU Logo" class="logo-image">
+        </a>
+      </div>
+
+      <!-- MENU -->
+      <nav class="navigation">
+        <div class="nav-background">
+          <ul class="nav-list">
+            <li><a href="./servicios.html" class="nav-link">Servicios</a></li>
+            <li><a href="./paquetes.html" class="nav-link">Paquetes</a></li>
+            <li><a href="./galeria.html" class="nav-link">Galería</a></li>
+            <li><a href="./ubicacion.html" class="nav-link">Ubicación</a></li>
+            <li><a href="./contacto.html" class="nav-link active">Contáctanos</a></li>
+          </ul>
+        </div>
+      </nav>
+
+
+    </div>
+  </header>
+
+  <main class="main-content">
+    <section class="hero-section">
+      <h1 class="hero-title">Paquetes</h1>
+      <div class="decorative-icons">
+        <img src="https://codia-f2c.s3.us-west-1.amazonaws.com/image/2025-08-05/e32SKphesz.svg" alt="Decorative icon"
+          class="icon-top">
+        <img src="https://codia-f2c.s3.us-west-1.amazonaws.com/image/2025-08-05/5kxTvDosfr.svg" alt="Decorative icon"
+          class="icon-bottom">
+      </div>
+    </section>
+
+    <section class="packages-section">
+      <div class="packages-container">
+        <!-- Package 1 - 3 personas -->
+        <article class="package-card package-blue">
+          <div class="package-header">
+            <div class="package-icon blue-icon">
+              <div class="icon-circle"></div>
+              <div class="icon-base"></div>
+            </div>
+            <h2 class="package-title">Oficina privada para<br>3 personas</h2>
+          </div>
+
+          <div class="package-divider blue-divider"></div>
+
+          <button class="preview-button" onclick="location.href='galeria.html'">Vista previa</button>
+
+          <div class="package-features">
+            <p>Wifi alta velocidad</p>
+            <p>Acceso a impresoras</p>
+            <p>Sala de juntas</p>
+            <p>Áreas comunes</p>
+            <p>Café, té, ilimitado</p>
+            <p>Seguridad 24/7</p>
+            <p>Horario Flexible</p>
+            <p>Limpieza</p>
+            <p>Aire acondicionado</p>
+            <p>Estacionamiento</p>
+            <p>Recepcionista</p>
+          </div>
+
+          <div class="pricing-options">
+            <div class="pricing-option monthly blue-monthly" onclick="location.href='contacto.html'">
+              <span>Renta mensual</span>
+            </div>
+            <div class="pricing-option semester blue-semester" onclick="location.href='contacto.html'">
+              <span>Renta semestral</span>
+            </div>
+            <div class="pricing-option annual blue-annual" onclick="location.href='contacto.html'">
+              <span>Renta anual</span>
+            </div>
+          </div>
+        </article>
+
+        <!-- Package 2 - 4 personas -->
+        <article class="package-card package-yellow">
+          <div class="package-header">
+            <div class="package-icon yellow-icon">
+              <div class="icon-circle"></div>
+              <div class="icon-base"></div>
+            </div>
+            <h2 class="package-title">Oficina privada para<br>4 personas</h2>
+          </div>
+
+          <div class="package-divider yellow-divider"></div>
+
+          <button class="preview-button" onclick="location.href='galeria.html'">Vista previa</button>
+
+
+          <div class="package-features">
+            <p>Wifi alta velocidad</p>
+            <p>Acceso a impresoras</p>
+            <p>Sala de juntas</p>
+            <p>Áreas comunes</p>
+            <p>Café, té, ilimitado</p>
+            <p>Seguridad 24/7</p>
+            <p>Horario Flexible</p>
+            <p>Limpieza</p>
+            <p>Aire acondicionado</p>
+            <p>Estacionamiento</p>
+            <p>Recepcionista</p>
+          </div>
+
+          <div class="pricing-options">
+            <div class="pricing-option monthly yellow-monthly" onclick="location.href='contacto.html'">
+              <span>Renta mensual</span>
+            </div>
+            <div class="pricing-option semester yellow-semester" onclick="location.href='contacto.html'">
+              <span>Renta semestral</span>
+            </div>
+            <div class="pricing-option annual yellow-annual" onclick="location.href='contacto.html'">
+              <span>Renta anual</span>
+            </div>
+          </div>
+        </article>
+
+        <!-- Package 3 - 5 personas -->
+        <article class="package-card package-white">
+          <div class="package-header">
+            <div class="package-icon white-icon">
+              <div class="icon-circle"></div>
+              <div class="icon-base"></div>
+            </div>
+            <h2 class="package-title">Oficina privada para<br>5 personas</h2>
+          </div>
+
+          <div class="package-divider white-divider"></div>
+
+          <!-- <button class="preview-button">Vista previa</button> -->
+          <button class="preview-button" onclick="location.href='galeria.html'">Vista previa</button>
+
+          <div class="package-features">
+            <p>Wifi alta velocidad</p>
+            <p>Acceso a impresoras</p>
+            <p>Sala de juntas</p>
+            <p>Áreas comunes</p>
+            <p>Café, té, ilimitado</p>
+            <p>Seguridad 24/7</p>
+            <p>Horario Flexible</p>
+            <p>Limpieza</p>
+            <p>Aire acondicionado</p>
+            <p>Estacionamiento</p>
+            <p>Recepcionista</p>
+          </div>
+
+          <div class="pricing-options">
+            <div class="pricing-option monthly white-monthly" onclick="location.href='contacto.html'">
+              <span>Renta mensual</span>
+            </div>
+            <div class="pricing-option semester white-semester" onclick="location.href='contacto.html'">
+              <span>Renta semestral</span>
+            </div>
+            <div class="pricing-option annual white-annual" onclick="location.href='contacto.html'">
+              <span>Renta anual</span>
+            </div>
+          </div>
+        </article>
+
+        <!-- PARA 6 -->
+        <!-- PARA 6 -->
+        <article class="package-card package-blue package-six">
+          <div class="package-header">
+            <div class="package-icon blue-icon">
+              <div class="icon-circle"></div>
+              <div class="icon-base"></div>
+            </div>
+            <h2 class="package-title">Oficina privada para<br>6 personas</h2>
+          </div>
+
+          <div class="package-divider blue-divider"></div>
+
+          <button class="preview-button" onclick="location.href='galeria.html'">Vista previa</button>
+ <div class="package-features">
+            <p>Wifi alta velocidad</p>
+            <p>Acceso a impresoras</p>
+            <p>Sala de juntas</p>
+            <p>Áreas comunes</p>
+            <p>Café, té, ilimitado</p>
+            <p>Seguridad 24/7</p>
+            <p>Horario Flexible</p>
+            <p>Limpieza</p>
+            <p>Aire acondicionado</p>
+            <p>Estacionamiento</p>
+            <p>Recepcionista</p>
+          </div>
+          <!-- … resto igual … -->
+
+          <div class="pricing-options">
+            <div class="pricing-option monthly blue-monthly" onclick="location.href='contacto.html'">
+              <span>Renta mensual</span>
+            </div>
+            <div class="pricing-option semester blue-semester" onclick="location.href='contacto.html'">
+              <span>Renta semestral</span>
+            </div>
+            <div class="pricing-option annual blue-annual" onclick="location.href='contacto.html'">
+              <span>Renta anual</span>
+            </div>
+          </div>
+        </article>
+
+      </div>
+
+    </section>
+
+    <!-- <div class="floating-icon">
+      <img src="https://codia-f2c.s3.us-west-1.amazonaws.com/image/2025-08-05/qV6rOwYcuD.svg" alt="Floating icon">
+    </div> -->
+    <div style="height: 180px;"></div>
+    <div class="back-arrow-container">
+      <a href="#" class="back-arrow" title="Volver arriba">
+        <img src="https://codia-f2c.s3.us-west-1.amazonaws.com/image/2025-08-05/LsQYMCH0YU.svg" alt="Volver arriba">
+      </a>
+    </div>
+  </main>
+
+  <!-- 
+  <footer class="footer">
+    <img src="https://codia-f2c.s3.us-west-1.amazonaws.com/image/2025-08-05/sSvZdFwgZK.svg" alt="Footer" class="footer-image">
+  </footer> -->
+  <!-- <footer class="footer">
+    <img src="https://codia-f2c.s3.us-west-1.amazonaws.com/image/2025-08-05/Z7gZ4J3vj8.svg" alt="Footer decoration"
+      class="footer-image">
+  </footer> -->
+
+  <footer class="footer" style="background-color: #0B4A72; padding: 20px;">
+    <div style="display: flex; justify-content: space-between; align-items: center;">
+
+      <!-- Redes sociales -->
+      <div class="social-icons" style="display: flex; gap: 15px;">
+        <a href="https://www.facebook.com/share/1GK7wMCExv/" target="_blank">
+          <img src="https://upload.wikimedia.org/wikipedia/commons/4/44/Facebook_Logo.png" alt="Facebook" width="40"
+            height="40" style="border-radius: 50%;">
+        </a>
+        <a href="https://www.instagram.com/oru_office_solutions?igsh=ZHYzcnQ5Z2pxcXBv " target="_blank">
+          <img src="https://upload.wikimedia.org/wikipedia/commons/a/a5/Instagram_icon.png" alt="Instagram" width="40"
+            height="40" style="border-radius: 50%;">
+        </a>
+      </div>
+
+      <!-- Logo  -->
+      <div class="logo">
+        <img src="images/footerLog.png" alt="Logo ORU" width="140">
+      </div>
+
+    </div>
+
+  </footer>
+  <script src="script.js"></script>
+</body>
+
+</html>

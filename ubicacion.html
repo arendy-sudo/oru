@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ubicación - ORU</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles/reset.css">
+  <link rel="stylesheet" href="styles/layout.css">
+  <link rel="stylesheet" href="styles/header.css">
+  <link rel="stylesheet" href="styles/main.css">
+  <link rel="stylesheet" href="styles/footer.css">
+
+  <style>
+    /* Estilo para mostrar imagen y mapa en horizontal */
+    .location-section {
+      display: flex;
+      gap: 20px;
+      align-items: stretch;
+      flex-wrap: wrap;
+    }
+
+    .location-section div {
+      flex: 1;
+      min-width: 300px;
+    }
+
+    .location-section img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .location-section iframe {
+      width: 100%;
+      height: 100%;
+    }
+
+    .address-info {
+      margin-top: 10px;
+    }
+
+    .address-info p {
+      text-align: center;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="page-container">
+    <header class="header">
+      <div class="header-container">
+        <div class="logo">
+          <a href="index.html">
+            <img src="images/ORU logo principal.png" alt="ORU Logo" class="logo-image">
+          </a>
+        </div>
+
+        <!-- MENU -->
+        <nav class="navigation">
+          <div class="nav-background">
+            <ul class="nav-list">
+              <li><a href="./servicios.html" class="nav-link">Servicios</a></li>
+              <li><a href="./paquetes.html" class="nav-link">Paquetes</a></li>
+              <li><a href="./galeria.html" class="nav-link">Galería</a></li>
+              <li><a href="./ubicacion.html" class="nav-link">Ubicación</a></li>
+              <li><a href="./contacto.html" class="nav-link active">Contáctanos</a></li>
+            </ul>
+          </div>
+        </nav>
+      </div>
+    </header>
+
+    <main class="main-content">
+      <section class="hero-section">
+        <h1 class="page-title">Ubicación</h1>
+      </section>
+
+      <!-- Contenedor de imagen y mapa en horizontal -->
+      <section class="location-section">
+        <div>
+          <img src="galería/torre nexus.png" alt="Descripción de la imagen">
+        </div>
+        <div>
+          <iframe
+            style="border:0"
+            loading="lazy"
+            allowfullscreen
+            referrerpolicy="no-referrer-when-downgrade"
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d7544.386275561112!2d-98.25436323642656!3d19.011209217370034!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x85cfc74122fc5b87%3A0xbc60b4cc14f4a2d4!2sNEXUS!5e0!3m2!1ses!2smx!4v1754497381428!5m2!1ses!2smx">
+          </iframe>
+        </div>
+      </section>
+
+      <!-- Dirección -->
+      <div class="address-info">
+        <p>
+          Torres Bosques 1, Atlixcáyotl, Reserva Territorial Atlixcáyotl, 72810 Heroica Puebla de Zaragoza, Pue.<br>
+          Coordenadas 19.01061012290692, -98.24550727116413.
+        </p>
+      </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer" style="background-color: #0B4A72; padding: 20px;">
+      <div style="display: flex; justify-content: space-between; align-items: center;">
+        <!-- Redes sociales -->
+        <div class="social-icons" style="display: flex; gap: 15px;">
+          <a href="https://www.facebook.com/share/1GK7wMCExv/" target="_blank">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/4/44/Facebook_Logo.png"
+              alt="Facebook" width="40" height="40" style="border-radius: 50%;">
+          </a>
+          <a href="https://www.instagram.com/oru_office_solutions?igsh=ZHYzcnQ5Z2pxcXBv" target="_blank">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/a/a5/Instagram_icon.png"
+              alt="Instagram" width="40" height="40" style="border-radius: 50%;">
+          </a>
+        </div>
+
+        <!-- Logo -->
+        <div class="logo">
+          <img src="images/footerLog.png" alt="Logo ORU" width="140">
+        </div>
+      </div>
+    </footer>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Galería - ORU</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="styles/main.css">
+  <link rel="stylesheet" href="styles/header.css">
+  <link rel="stylesheet" href="styles/gallery.css">
+  <link rel="stylesheet" href="styles/footer.css">
+  <!--  -->
+  <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"> -->
+</head>
+<body>
+
+  <header class="header">
+    <div class="header-container">
+      <div class="logo">
+        <a href="index.html">
+          <img src="images/ORU logo principal.png" alt="ORU Logo" class="logo-image">
+        </a>
+      </div>
+
+      <!-- MENU -->
+      <nav class="navigation">
+        <div class="nav-background">
+          <ul class="nav-list">
+            <li><a href="./servicios.html" class="nav-link">Servicios</a></li>
+            <li><a href="./paquetes.html" class="nav-link">Paquetes</a></li>
+            <li><a href="./galeria.html" class="nav-link">Galería</a></li>
+            <li><a href="./ubicacion.html" class="nav-link">Ubicación</a></li>
+            <li><a href="./contacto.html" class="nav-link active">Contáctanos</a></li>
+          </ul>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <main class="main-content">
+    <section class="gallery-hero">
+      <div class="background-circles"></div>
+      <h1 class="gallery-title">Galería</h1>
+      
+      <div class="gallery-container">
+        <button class="gallery-nav prev-btn" aria-label="Imagen anterior">
+          <svg width="42" height="105" viewBox="0 0 42 105" fill="none" aria-hidden="true">
+            <path d="M37 5L5 52.5L37 100" stroke="#F4F8ED" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </button>
+        
+        <div class="main-image-container">
+          <img src="https://codia-f2c.s3.us-west-1.amazonaws.com/image/2025-08-05/fRyS8cvzoP.png"
+               alt="Imagen principal de la galería" class="main-image">
+          <div class="image-overlay left"></div>
+          <div class="image-overlay right"></div>
+        </div>
+        
+        <button class="gallery-nav next-btn" aria-label="Siguiente imagen">
+          <svg width="42" height="105" viewBox="0 0 42 105" fill="none" aria-hidden="true">
+            <path d="M5 5L37 52.5L5 100" stroke="#F4F8ED" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </button>
+      </div>
+      
+      <div class="thumbnail-gallery">
+        <img src="galería/Convivencia en ORU.png" alt="Miniatura 1" class="thumbnail">
+        <img src="galería/IMG_6667.png" alt="Miniatura 2" class="thumbnail">
+        <img src="galería/IMG_6694 (1).JPG" alt="Miniatura 3" class="thumbnail active">
+        <img src="galería/IMG_6825.jpg" alt="Miniatura 3" class="thumbnail active">
+        <img src="galería/IMG_6714.jpg" alt="Miniatura 4" class="thumbnail">
+        <img src="galería/IMG_6686.jpg" alt="Miniatura 5" class="thumbnail">
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer" style="background-color: #0B4A72; padding: 20px;">
+    <div style="display: flex; justify-content: space-between; align-items: center;">
+      <div class="social-icons" style="display: flex; gap: 15px;">
+        <a href="https://www.facebook.com/share/1GK7wMCExv/" target="_blank" rel="noopener">
+          <img src="https://upload.wikimedia.org/wikipedia/commons/4/44/Facebook_Logo.png" alt="Facebook"
+               width="40" height="40" style="border-radius: 50%;">
+        </a>
+        <a href="https://www.instagram.com/oru_office_solutions?igsh=ZHYzcnQ5Z2pxcXBv " target="_blank" rel="noopener">
+          <img src="https://upload.wikimedia.org/wikipedia/commons/a/a5/Instagram_icon.png" alt="Instagram"
+               width="40" height="40" style="border-radius: 50%;">
+        </a>
+      </div>
+
+      <div class="logo">
+        <img src="images/footerLog.png" alt="Logo ORU" width="140">
+      </div>
+    </div>
+  </footer>
+
+  <!-- Carrusel JS -->
+  <script>
+    const mainImg  = document.querySelector('.main-image');
+    const thumbs   = Array.from(document.querySelectorAll('.thumbnail'));
+    const prevBtn  = document.querySelector('.prev-btn');
+    const nextBtn  = document.querySelector('.next-btn');
+
+    let current = Math.max(0, thumbs.findIndex(t => t.classList.contains('active')));
+    if (current === -1) current = 0;
+
+    function setActive(index) {
+      if (!thumbs.length) return;
+      current = (index + thumbs.length) % thumbs.length;
+      mainImg.src = thumbs[current].src;
+      thumbs.forEach(t => t.classList.remove('active'));
+      thumbs[current].classList.add('active');
+    }
+
+    thumbs.forEach((t, i) => t.addEventListener('click', () => setActive(i)));
+    prevBtn.addEventListener('click', () => setActive(current - 1));
+    nextBtn.addEventListener('click', () => setActive(current + 1));
+
+    window.addEventListener('keydown', (e) => {
+      if (e.key === 'ArrowLeft')  setActive(current - 1);
+      if (e.key === 'ArrowRight') setActive(current + 1);
+    });
+
+    setActive(current);
+  </script>
+</body>
+</html>

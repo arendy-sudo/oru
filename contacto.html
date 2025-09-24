@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contacto - ORU</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles/main.css">
+  <link rel="stylesheet" href="styles/header.css">
+  <link rel="stylesheet" href="styles/contact.css">
+  <link rel="stylesheet" href="styles/footer.css">
+</head>
+
+<body>
+  <header class="header">
+    <div class="header-container">
+      <div class="logo">
+        <a href="index.html">
+          <img src="images/ORU logo principal.png" alt="ORU Logo" class="logo-image">
+        </a>
+      </div>
+
+      <!-- MENU -->
+      <nav class="navigation">
+        <div class="nav-background">
+          <ul class="nav-list">
+            <li><a href="./servicios.html" class="nav-link">Servicios</a></li>
+            <li><a href="./paquetes.html" class="nav-link">Paquetes</a></li>
+            <li><a href="./galeria.html" class="nav-link">Galería</a></li>
+            <li><a href="./ubicacion.html" class="nav-link">Ubicación</a></li>
+            <li><a href="./contacto.html" class="nav-link active">Contáctanos</a></li>
+          </ul>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <main class="main-content">
+    <section class="contact-section">
+      <div class="contact-container">
+        <h1 class="contact-title">Contacto</h1>
+
+        <div class="contact-content">
+          <div class="contact-info">
+            <div class="contact-item">
+              <div class="contact-icon">
+                <img src="https://codia-f2c.s3.us-west-1.amazonaws.com/image/2025-08-05/hK3Qbxfhv1.svg" alt="Teléfono" class="icon">
+              </div>
+              <div class="contact-details">
+                <h3 class="contact-label">Teléfono</h3>
+                <p class="contact-value">222-1781-307</p>
+              </div>
+            </div>
+
+
+            <div class="contact-item">
+              <div class="contact-icon">
+                <img src="https://codia-f2c.s3.us-west-1.amazonaws.com/image/2025-08-05/H7vhCEQF5r.svg" alt="Email" class="icon">
+              </div>
+              <div class="contact-details">
+                <h3 class="contact-label">Email</h3>
+                <p class="contact-value">atencion@oruoficinas.com </p>
+              </div>
+            </div>
+          </div>
+
+          <!-- FORMULARIO -->
+          <!--<form class="contact-form" action="https://formspree.io/f/xblkqpeo" method="POST">-->
+
+           <!-- FORMULARIO -->
+          <form class="contact-form" action="https://formspree.io/f/xovkqdbg" method="POST">
+            <!-- Asunto personalizado del correo -->
+           <input type="hidden" name="_subject" value="Nuevo mensaje desde el sitio ORU">
+
+            <div class="form-group">
+              <label for="nombre" class="form-label">Tu nombre</label>
+              <input type="text" id="nombre" name="nombre" class="form-input" required>
+            </div>
+
+            <div class="form-group">
+              <label for="email" class="form-label">Tu mail</label>
+              <input type="email" id="email" name="email" class="form-input" required>
+            </div>
+
+            <div class="form-group">
+              <label for="telefono" class="form-label">Teléfono (opcional)</label>
+              <input type="tel" id="telefono" name="telefono" class="form-input">
+            </div>
+
+            <div class="form-group">
+              <label for="mensaje" class="form-label">Mensaje</label>
+              <textarea id="mensaje" name="message" class="form-textarea" rows="8" required></textarea>
+            </div>
+
+            <div class="form-group">
+              <button type="submit" class="form-button">Enviar mensaje</button>
+            </div>
+          </form> 
+
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer" style="background-color: #0B4A72; padding: 20px;">
+    <div style="display: flex; justify-content: space-between; align-items: center;">
+      <!-- Redes sociales -->
+      <div class="social-icons" style="display: flex; gap: 15px;">
+        <a href="https://www.facebook.com/share/1GK7wMCExv/" target="_blank">
+          <img src="https://upload.wikimedia.org/wikipedia/commons/4/44/Facebook_Logo.png" 
+               alt="Facebook" width="50" height="50" style="border-radius: 50%;">
+        </a>
+        <a href="https://www.instagram.com/oru_office_solutions?igsh=ZHYzcnQ5Z2pxcXBv " target="_blank">
+          <img src="https://upload.wikimedia.org/wikipedia/commons/a/a5/Instagram_icon.png" 
+               alt="Instagram" width="50" height="50" style="border-radius: 50%;">
+        </a>
+      </div>
+
+      <!-- Logo  -->
+      <div class="logo">
+        <img src="images/footerLog.png" alt="Logo ORU" width="140">
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+
+</html>
