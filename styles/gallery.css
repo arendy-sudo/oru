@@ -1,0 +1,259 @@
+.gallery-hero {
+  position: relative;
+  padding: 11px 0 68px;
+  min-height: calc(100vh - 123px);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.background-circles {
+  position: absolute;
+  top: 14px;
+  left: 137px;
+  width: 1303px;
+  height: 1313px;
+  background-image: url('https://codia-f2c.s3.us-west-1.amazonaws.com/image/2025-08-05/nWjWSyMFYk.svg');
+  background-repeat: no-repeat;
+  background-size: contain;
+  z-index: 0;
+  pointer-events: none;
+}
+
+.gallery-title {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 700;
+  font-size: 128px;
+  line-height: 156.03px;
+  color: #F4F8ED;
+  text-align: center;
+  margin-bottom: 117px;
+  position: relative;
+  z-index: 2;
+}
+
+.gallery-container {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 41px;
+  margin-bottom: 86px;
+  z-index: 2;
+}
+
+.main-image-container {
+  position: relative;
+  width: 1238px;
+  height: 824px;
+  border-radius: 100px;
+  overflow: hidden;
+}
+
+.main-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 100px;
+}
+
+.image-overlay {
+  position: absolute;
+  top: 0;
+  width: 221px;
+  height: 100%;
+  pointer-events: none;
+}
+
+.image-overlay.left {
+  left: 0;
+  background: linear-gradient(90deg, #104C77 0%, rgba(30, 141, 221, 0) 100%);
+  border-radius: 100px 0px 0px 100px;
+}
+
+.image-overlay.right {
+  right: 0;
+  background: linear-gradient(90deg, rgba(30, 141, 221, 0) 0%, #104C77 100%);
+  border-radius: 0px 100px 100px 0px;
+}
+
+.gallery-nav {
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.3s ease, opacity 0.3s ease;
+  filter: drop-shadow(4px 6px 8.1px rgba(0, 0, 0, 0.51));
+}
+
+.gallery-nav:hover {
+  transform: scale(1.1);
+  opacity: 0.8;
+}
+
+.gallery-nav:active {
+  transform: scale(0.95);
+}
+
+.thumbnail-gallery {
+  display: flex;
+  gap: 37px;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  z-index: 2;
+}
+
+.thumbnail {
+  width: 175px;
+  height: 117px;
+  border-radius: 127px;
+  object-fit: cover;
+  opacity: 0.3;
+  cursor: pointer;
+  transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.thumbnail:hover {
+  opacity: 0.6;
+  transform: scale(1.05);
+}
+
+.thumbnail.active {
+  opacity: 1;
+  transform: scale(1.1);
+}
+
+@media (max-width: 1400px) {
+  .background-circles {
+    left: 50px;
+    width: 1100px;
+    height: 1100px;
+  }
+  
+  .main-image-container {
+    width: 1000px;
+    height: 667px;
+  }
+  
+  .gallery-container {
+    gap: 30px;
+  }
+}
+
+@media (max-width: 1200px) {
+  .gallery-title {
+    font-size: 96px;
+    line-height: 117px;
+    margin-bottom: 80px;
+  }
+  
+  .main-image-container {
+    width: 800px;
+    height: 533px;
+  }
+  
+  .image-overlay {
+    width: 150px;
+  }
+  
+  .thumbnail {
+    width: 140px;
+    height: 93px;
+  }
+  
+  .thumbnail-gallery {
+    gap: 25px;
+  }
+}
+
+@media (max-width: 900px) {
+  .gallery-title {
+    font-size: 72px;
+    line-height: 88px;
+    margin-bottom: 60px;
+  }
+  
+  .gallery-container {
+    flex-direction: column;
+    gap: 20px;
+  }
+  
+  .main-image-container {
+    width: 90vw;
+    max-width: 600px;
+    height: 400px;
+  }
+  
+  .gallery-nav {
+    position: static;
+  }
+  
+  .thumbnail-gallery {
+    flex-wrap: wrap;
+    gap: 15px;
+    max-width: 90vw;
+  }
+  
+  .thumbnail {
+    width: 120px;
+    height: 80px;
+  }
+}
+
+@media (max-width: 600px) {
+  .gallery-title {
+    font-size: 48px;
+    line-height: 58px;
+    margin-bottom: 40px;
+  }
+  
+  .main-image-container {
+    height: 300px;
+    border-radius: 50px;
+  }
+  
+  .main-image {
+    border-radius: 50px;
+  }
+  
+  .image-overlay.left {
+    border-radius: 50px 0px 0px 50px;
+  }
+  
+  .image-overlay.right {
+    border-radius: 0px 50px 50px 0px;
+  }
+  
+  .thumbnail {
+    width: 100px;
+    height: 67px;
+    border-radius: 50px;
+  }
+  
+  .background-circles {
+    display: none;
+  }
+}
+
+
+/* Estado visual para la miniatura activa y hover */
+.thumbnail {
+  opacity: 0.75;
+  cursor: pointer;
+  transition: transform .2s ease, opacity .2s ease, outline-color .2s ease;
+}
+
+.thumbnail:hover {
+  opacity: 0.95;
+  transform: scale(1.02);
+}
+
+.thumbnail.active {
+  opacity: 1;
+  outline: 3px solid #F4F8ED;
+  outline-offset: 2px;
+}

@@ -1,0 +1,28 @@
+.footer {
+  position: relative;
+  margin-top: auto;
+  z-index: 1;
+}
+
+.footer-image {
+  width: 1495px;
+  height: 178px;
+  margin-left: -28px;
+  display: block;
+}
+
+@media (max-width: 1500px) {
+  .footer-image {
+    width: 100vw;
+    height: auto;
+    margin-left: 0;
+    max-width: none;
+  }
+}
+
+@media (max-width: 768px) {
+  .footer-image {
+    height: 120px;
+    object-fit: cover;
+  }
+}

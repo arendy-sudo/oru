@@ -1,0 +1,160 @@
+.hero {
+  position: relative;
+  height: 947px;
+  margin-top: 12px;
+  background: linear-gradient(180deg, #104C77 0%, #1E8DDD 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.hero-background {
+  position: absolute;
+  top: -25px;
+  left: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+}
+
+.hero-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
+.hero-content {
+  position: relative;
+  z-index: 2;
+  text-align: center;
+  max-width: 1184px;
+  padding: 0 20px;
+}
+
+.hero-title {
+  font-size: 128px;
+  font-weight: 700;
+  line-height: 156.03px;
+  color: #F4F8ED;
+  margin-bottom: 40px;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.hero-subtitle {
+  font-size: 32px;
+  font-weight: 400;
+  line-height: 39.01px;
+  color: #F4F8ED;
+  margin-bottom: 80px;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
+}
+
+.hero-cta {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+}
+
+.cta-text {
+  font-size: 32px;
+  font-weight: 400;
+  line-height: 39.01px;
+  color: #F4F8ED;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
+}
+
+.cta-underline {
+  width: 390px;
+  height: 3px;
+  background-color: #F4F8ED;
+  border-radius: 2px;
+}
+
+.cta-arrow {
+  margin-top: 10px;
+}
+
+.arrow-icon {
+  width: 86px;
+  height: 24.83px;
+  filter: drop-shadow(1px 1px 2px rgba(0, 0, 0, 0.3));
+}
+
+/* Responsive Hero Section */
+@media (max-width: 1200px) {
+  .hero-title {
+    font-size: 96px;
+    line-height: 120px;
+  }
+  
+  .hero-subtitle {
+    font-size: 28px;
+    line-height: 34px;
+  }
+  
+  .cta-text {
+    font-size: 28px;
+    line-height: 34px;
+  }
+  
+  .cta-underline {
+    width: 300px;
+  }
+}
+
+@media (max-width: 768px) {
+  .hero {
+    height: 600px;
+  }
+  
+  .hero-title {
+    font-size: 64px;
+    line-height: 80px;
+    margin-bottom: 20px;
+  }
+  
+  .hero-subtitle {
+    font-size: 24px;
+    line-height: 30px;
+    margin-bottom: 40px;
+  }
+  
+  .cta-text {
+    font-size: 24px;
+    line-height: 30px;
+  }
+  
+  .cta-underline {
+    width: 250px;
+  }
+  
+  .arrow-icon {
+    width: 60px;
+    height: 18px;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero-title {
+    font-size: 48px;
+    line-height: 60px;
+  }
+  
+  .hero-subtitle {
+    font-size: 20px;
+    line-height: 26px;
+  }
+  
+  .cta-text {
+    font-size: 20px;
+    line-height: 26px;
+  }
+  
+  .cta-underline {
+    width: 200px;
+  }
+}

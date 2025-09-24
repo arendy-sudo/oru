@@ -1,0 +1,271 @@
+.packages-section {
+  padding: 80px 20px 100px;
+  position: relative;
+  z-index: 1;
+}
+
+.packages-container {
+  max-width: 1440px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr); /* <-- 4 columnas en desktop */
+  gap: 58px;
+  justify-content: center;
+}
+
+.package-card {
+  background: rgba(248, 245, 237, 0.2);
+  border-radius: 0 0 50px 50px;
+  height: 944px;
+  max-width: 410px;
+  width: 100%;
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.package-header {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  padding: 40px 30px 20px;
+  height: 126px;
+}
+
+.package-icon {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 79px;
+  height: 96px;
+}
+
+.icon-circle {
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  margin-bottom: 7px;
+}
+
+.icon-base {
+  width: 79px;
+  height: 43px;
+  border-radius: 60px 60px 10px 10px;
+}
+
+/* Icon colors */
+.blue-icon .icon-circle,
+.blue-icon .icon-base {
+  background-color: #40ADFC;
+}
+
+.yellow-icon .icon-circle,
+.yellow-icon .icon-base {
+  background-color: #FFD77C;
+}
+
+.white-icon .icon-circle,
+.white-icon .icon-base {
+  background-color: #F4F8ED;
+}
+
+.package-title {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 28px;
+}
+
+.package-blue .package-title { color: #40ADFC; }
+.package-yellow .package-title { color: #FFD77C; }
+.package-white .package-title { color: #F4F8ED; }
+
+.package-divider {
+  width: 100%;
+  height: 2px;
+  background-color: #F4F8ED;
+}
+
+.preview-button {
+  width: 250px;
+  height: 50px;
+  border: 1px solid #F4F8ED;
+  border-radius: 50px;
+  background: transparent;
+  color: #F4F8ED;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 400;
+  font-size: 20px;
+  text-align: center;
+  margin: 30px auto;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.preview-button:hover {
+  background-color: rgba(244, 248, 237, 0.1);
+  transform: translateY(-2px);
+}
+
+.package-features {
+  padding: 0 30px;
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.package-features p {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 24px;
+  color: #F4F8ED;
+  margin-bottom: 10px;
+}
+
+.pricing-options {
+  position: absolute;
+  bottom: 40px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.pricing-option {
+  width: 100%;
+  max-width: 400px; /* más largo */
+  min-width: 300px;
+  height: 78px;
+  border-radius: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0 30px;
+}
+
+.pricing-option span {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 1;
+  white-space: nowrap;
+}
+
+/* Blue package colors */
+.blue-monthly { background: rgba(10, 108, 180, 0.30); }
+.blue-semester { background:rgba(10, 108, 180, 0.60); }
+.blue-annual { background: #0A6CB4; }
+
+
+.blue-monthly span,
+.blue-semester span,
+.blue-annual span { color: #F4F8ED; }
+
+/* Yellow package colors */
+.yellow-monthly { background: rgba(255, 190, 10, 0.3); }
+.yellow-semester { background: rgba(255, 198, 11, 0.6); }
+.yellow-annual { background: #F9AE00; }
+.yellow-monthly span,
+.yellow-semester span,
+.yellow-annual span { color: #F2F7EB; }
+
+/* White package colors */
+.white-monthly { background: rgba(244, 248, 237, 0.3); }
+.white-semester { background: rgba(244, 248, 237, 0.6); }
+.white-annual { background: #F4F8ED; }
+.white-monthly span,
+.white-semester span { color: #104C77; }
+.white-annual span { color: #104C77; }
+
+/* Responsive */
+@media (max-width: 1200px) {
+  .packages-container {
+    grid-template-columns: repeat(2, 1fr); /* 2 por fila */
+  }
+}
+
+@media (max-width: 768px) {
+  .packages-container {
+    grid-template-columns: 1fr; /* 1 por fila */
+    max-width: 100%;
+    gap: 30px;
+  }
+
+  .package-card {
+    max-width: 100%;
+    height: auto;
+  }
+
+  .package-title {
+    font-size: 20px;
+    line-height: 24px;
+  }
+
+  .preview-button {
+    width: 200px;
+    height: 45px;
+    font-size: 18px;
+  }
+
+  .package-features p {
+    font-size: 16px;
+    line-height: 22px;
+  }
+
+  .pricing-option {
+    height: 60px;
+  }
+
+  .pricing-option span {
+    font-size: 20px;
+  }
+}
+
+.hero-section {
+  text-align: center;
+  padding-top: 60px;
+  padding-bottom: 100px; /* aumentar separación inferior */
+}
+
+.hero-title {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 80px;
+  font-weight: 800;
+  color: #F4F8ED;
+  margin: 40px 0;
+}
+
+.decorative-icons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+
+
+/* ==== Overrides SOLO para el paquete de 6 personas ==== */
+.package-six .package-title {
+  color: #022c4a; /* azul más fuerte */
+}
+
+/* Ícono (círculo y base) más oscuro */
+.package-six .package-icon .icon-circle,
+.package-six .package-icon .icon-base {
+  background-color: #022c4a;
+}
+
+/* Botones de precios más oscuros */
+.package-six .blue-monthly  { background:rgba(16, 76, 119, 0.3);  }
+.package-six .blue-semester   { background:  rgba(16, 76, 119, 0.6);  }
+.package-six .blue-annual    { background:  #104C77; } 
+
+/* Texto de los botones en claro para buen contraste */
+.package-six .blue-monthly span,
+.package-six .blue-semester span,
+.package-six .blue-annual span {
+  color: #F4F8ED;
+}
+

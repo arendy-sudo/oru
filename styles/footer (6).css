@@ -1,0 +1,52 @@
+.footer {
+  position: relative;
+  width: 100%;
+  height: 178px;
+  margin-top: auto;
+  overflow: hidden;
+}
+
+.footer-image {
+  width: 1495px;
+  height: 178px;
+  position: absolute;
+  left: -28px;
+  top: 0;
+  display: block;
+}
+
+.footer-icon {
+  position: absolute;
+  right: 52px;
+  top: 41.5px;
+  z-index: 2;
+}
+
+.footer-icon-image {
+  width: 95px;
+  height: 95px;
+  display: block;
+}
+
+@media (max-width: 768px) {
+  .footer {
+    height: 120px;
+  }
+  
+  .footer-image {
+    width: 100%;
+    height: 120px;
+    left: 0;
+    object-fit: cover;
+  }
+  
+  .footer-icon {
+    right: 20px;
+    top: 12.5px;
+  }
+  
+  .footer-icon-image {
+    width: 60px;
+    height: 60px;
+  }
+}

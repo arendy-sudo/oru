@@ -1,0 +1,26 @@
+/* Layout Styles */
+.page-container {
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.main-content {
+  flex: 1;
+  background: linear-gradient(180deg, #104C77 7.7%, #1E8DDD 100%);
+  position: relative;
+}
+
+/* Responsive breakpoints */
+@media (max-width: 768px) {
+  .page-container {
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 480px) {
+  .page-container {
+    font-size: 12px;
+  }
+}

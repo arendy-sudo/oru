@@ -1,0 +1,84 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Montserrat', sans-serif;
+  background: linear-gradient(180deg, #104C77 7.7%, #1E8DDD 100%);
+  min-height: 100vh;
+  position: relative;
+}
+
+.main-content {
+  position: relative;
+  z-index: 1;
+}
+
+.hero-section {
+  text-align: center;
+  padding: 60px 0 40px;
+  position: relative;
+}
+
+.hero-title {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 700;
+  font-size: 128px;
+  line-height: 156px;
+  color: #F4F8ED;
+  margin-bottom: 40px;
+}
+
+.decorative-icons {
+  position: relative;
+}
+
+.icon-top {
+  position: absolute;
+  top: -267px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 46px;
+  height: 35px;
+}
+
+.icon-bottom {
+  position: absolute;
+  top: 100px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 46px;
+  height: 35px;
+}
+
+.floating-icon {
+  position: fixed;
+  bottom: 95px;
+  right: 25px;
+  z-index: 1000;
+}
+
+.floating-icon img {
+  width: 95px;
+  height: 95px;
+}
+
+@media (max-width: 768px) {
+  .hero-title {
+    font-size: 64px;
+    line-height: 78px;
+  }
+  
+  .floating-icon {
+    bottom: 50px;
+    right: 15px;
+  }
+  
+  .floating-icon img {
+    width: 60px;
+    height: 60px;
+  }
+}
+

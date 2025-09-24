@@ -1,0 +1,32 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Montserrat', sans-serif;
+  background-color: #ffffff;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.main-content {
+  flex: 1;
+  background: linear-gradient(180deg, #104C77 7.7%, #1E8DDD 100%);
+  min-height: calc(100vh - 301px);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .main-content {
+    min-height: calc(100vh - 200px);
+  }
+}
+
+@media (max-width: 480px) {
+  .main-content {
+    min-height: calc(100vh - 150px);
+  }
+}
